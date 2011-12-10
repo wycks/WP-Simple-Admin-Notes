@@ -141,7 +141,7 @@ function default_scripts_note() {
  
         <div id="tabs-<?php echo $tabs_id; ?>">
 
-            <p class="note-date">Posted: <?php the_date(); ?> | <?php edit_post_link('Edit this note'); ?></p>
+            <p class="note-date">Posted: <?php the_date("j M Y"); ?> | <?php edit_post_link('Edit this note'); ?></p>
 
             <?php the_content(); ?>
        
