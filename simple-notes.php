@@ -90,8 +90,9 @@ function default_scripts_note() {
 
 
       <script type="text/javascript"> 
-            jQuery(function() {
-                    jQuery( "#note-tabs" ).tabs();
+          var $note = jQuery.noConflict(); 
+            $note(function() {
+                    $note( "#note-tabs" ).tabs();
             });
       </script> 
 
