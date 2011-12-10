@@ -3,7 +3,7 @@ Contributors: wycks
 Donate link: http://wordpressfoundation.org
 Tags: notes, admin notes, notepad, client notes
 Requires at least: 3.2
-Tested up to: 3.2.1
+Tested up to: 3.3
 Stable tag: 1.0.4
 
 Adds a simple "Notes" section to the admin menu for taking down....notes
