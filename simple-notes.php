@@ -175,8 +175,6 @@ License: GPL2
        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 
 
-      var_dump($post_id);
-
       // make sure Custom Post Types are included
       $post_types= get_post_types('','names'); 
       $posts_separated = implode(",",   $post_types);
