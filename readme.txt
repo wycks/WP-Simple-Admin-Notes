@@ -25,9 +25,12 @@ Features :
 
 Notes :
 
+*  It is currently only possible to set one note post post or post type and one location (above or below editor)
 *  Preview button does not work, as WordPress makes it difficult to get rid of, just ignore it.
 *  Aligning images might make it look weird.
 *  Note meta field is not availibe under screen options for custom post types
+
+There is a bug in WP for rendering notes below the editor that has been fixed in 3.6. Another solution is to just drag and drop it back into place using mouse.
 
 Please report issues to:  [https://github.com/wycks/Simple-Admin-Notes](https://github.com/wycks/Simple-Admin-Notes)
 

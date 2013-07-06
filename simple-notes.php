@@ -5,13 +5,13 @@ Plugin URI: https://twitter.com/wycks_s
 Description: Adds a simple Notes section to admin areas
 Author: Wycks
 Author URI: http://wordpress.org/extend/plugins/profile/wycks
-Version: 1.1.0
+Version: 1.0.5
 License: GPL2
 */
 
     // don't load directly
-    if ( !defined('ABSPATH') )
-      die('-1');
+   if ( !defined('ABSPATH') )
+      die('dont load directly');
 
 
     // enqueue jQuery tabs with default WP bundle in admin
@@ -174,7 +174,9 @@ License: GPL2
        if (isset($_GET['post']))
        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 
-      
+
+      var_dump($post_id);
+
       // make sure Custom Post Types are included
       $post_types= get_post_types('','names'); 
       $posts_separated = implode(",",   $post_types);
@@ -182,34 +184,30 @@ License: GPL2
 
         // query CPT use get_posts in admin areas!
         $args = array(
-          'post_type'      => 'note',
-          'posts_per_page' => 1,
-          'meta_query'     => array(
-                array(  'key' => 'note_placement_above'),
-                array(  'key' => 'note_placement_below')
+          'post_type'       => 'note',
+          'posts_per_page'  => -1,
+          'no_found_rows'   => true,
+           'meta_query'     => array(
+                  array(  
+                      'value'   => $post_id,                        
+                      'compare' => 'LIKE',                       
+                  ),
               )      
           );
 
         $notesposts = get_posts($args);
 
+
           foreach(  $notesposts as $notespost ) : setup_postdata($notespost); 
 
-            $idy = get_post_meta( $notespost->ID, 'note_ids', true);
             $placement_above = get_post_meta($notespost->ID, 'note_placement_above', true);
-            $placement_below = get_post_meta($notespost->ID, 'note_placement_below', true);
+            $placement_below = get_post_meta($notespost->ID, 'note_placement_below', true);       
+   
+            $title = $notespost->post_title;
 
-            // put id's into a proper array
-            $idys = explode(',', $idy);
-             
-              //match db id with post id
-              if(in_array($post_id, $idys)){
-
-                $title = $notespost->post_title;
-            
-                $output = get_the_content();
-                $output = apply_filters('the_content', $output);
-                $output = str_replace(']]>', ']]&gt;', $output);
-              }  
+            $output = get_the_content();
+            $output = apply_filters('the_content', $output);
+            $output = str_replace(']]>', ']]&gt;', $output);
 
           endforeach;
      
