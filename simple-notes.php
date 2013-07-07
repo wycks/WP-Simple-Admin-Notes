@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Simple Admin Notes
-Plugin URI: https://twitter.com/wycks_s
+Plugin URI: https://github.com/wycks/Simple-Admin-Notes
 Description: Adds a simple Notes section to admin areas
 Author: Wycks
 Author URI: http://wordpress.org/extend/plugins/profile/wycks
@@ -11,7 +11,7 @@ License: GPL2
 
     // don't load directly
    if ( !defined('ABSPATH') )
-      die('dont load directly');
+      die('Nope');
 
 
     // enqueue jQuery tabs with default WP bundle in admin
@@ -174,8 +174,6 @@ License: GPL2
        if (isset($_GET['post']))
        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 
-
-      var_dump($post_id);
 
       // make sure Custom Post Types are included
       $post_types= get_post_types('','names'); 

@@ -1,6 +1,6 @@
 #no-notes{padding:10px;margin-top:10px;}
 .demo{padding-right:20px;margin-top:30px;}
-.note-date, .note-date a{font-size: 10px;color:#21759B;}
+.note-date, .note-date a{font-size: 12px;color:#21759B;}
 .note-date a:hover{color:#000}
 #note-tabs .ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 #note-tabs .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
@@ -24,7 +24,7 @@ border-bottom-right-radius: 4px/*{cornerRadius}*/;
 #note-tabs .ui-widget input, #note-tabs .ui-widget select, #note-tabs .ui-widget textarea, #note-tabs .ui-widget button { font-family: Verdana,Arial,sans-serif/*{ffDefault}*/; font-size: 1em; }
 #note-tabs .ui-widget-content {}
 #note-tabs .ui-widget-content a { color: #222222/*{fcContent}*/; }
-#note-tabs .ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #cccccc/*{bgColorHeader}*/; color: #222222/*{fcHeader}*/; font-weight: bold;height: 30px; }
+#note-tabs .ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #cccccc/*{bgColorHeader}*/; color: #222222;height: 30px; }
 #note-tabs .ui-widget-header a { color: #222222/*{fcHeader}*/; }
 
 /* Interaction states
