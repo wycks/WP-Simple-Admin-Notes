@@ -202,12 +202,12 @@ License: GPL2
 					'post_type'       => 'note',
 					'posts_per_page'  => -1,
 					'no_found_rows'   => true,
-					 'meta_query'     => array(
-											array(  
-													'value'   => $post_id,                        
-													'compare' => 'LIKE',                       
-									),
-							)      
+					'meta_query'     => array(
+							array(  
+								'value'   => $post_id,
+								'compare' => 'LIKE',
+								),
+							)
 					);
 
 				$notesposts = get_posts( $args );
@@ -241,7 +241,6 @@ License: GPL2
 		}
 		add_action( 'add_meta_boxes', 'wpt_box_san' );
 		
-	
 	
 		/**
 		*  Place meta box above editor
@@ -310,12 +309,12 @@ License: GPL2
 				$args = array(
 					'post_type' => 'note',
 					'meta_query' => array(
-									array(
-										'key' => 'note_placement_yes', 
-										'value' => '', 
-										'compare' => 'EXISTS'
-									)
+							array(
+								'key' => 'note_placement_yes', 
+								'value' => '', 
+								'compare' => 'EXISTS'
 							)
+					)
 				);
 
 				$displayposts = new WP_Query($args); 
@@ -348,7 +347,7 @@ License: GPL2
 					<div id="tabs-<?php echo $tabs_id; ?>">
 					<p class="note-date">Posted: <?php the_date("j M Y"); ?> | <?php edit_post_link('Edit this note'); ?></p>
 
-						<?php the_content(); ?>  
+					<?php the_content(); ?>  
 
 					</div>
 			 
@@ -416,7 +415,8 @@ License: GPL2
 				jQuery('#san-below').prop('checked', false);
 			}
 		}) 
-	 jQuery('#san-below').click(function(){
+		
+	 	jQuery('#san-below').click(function(){
 			if (this.checked) {
 				jQuery('#san-above').prop('checked', false);
 			} 

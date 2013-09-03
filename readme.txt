@@ -3,8 +3,8 @@ Contributors: wycks
 Donate link: http://wordpressfoundation.org
 Tags: notes, admin notes, notepad, client notes, notes, help, 
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 1.1.0
+Tested up to: 3.6
+Stable tag: 3.6
 
 Adds a simple "Notes" section to the admin menu for adding....notes
 
@@ -40,7 +40,6 @@ Or Upload the zip and hit install.
 == Frequently Asked Questions ==
 
 
-
 == Screenshots ==
 
 1. A screenshot of Notes in the Admin and the Notes menu.
@@ -71,3 +70,7 @@ Or Upload the zip and hit install.
 == Upgrade Notice ==
 
 None yet
+
+== todo ==
+
+Check for post id duplicates
