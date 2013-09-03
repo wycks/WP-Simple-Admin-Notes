@@ -10,14 +10,13 @@ Adds a simple "Notes" section to the admin menu for adding....notes
 
 == Description ==
 
-Like a built in notepad, can leave notes for clients or yourself.  It comes with a default "Notes" section available for the admin menu or you can attach notes to above or below the editor of a post (or page or custom post type) in the admin.
+Like a built in notepad, leave notes for clients or yourself in the WordPress admin.  Attach notes to above or below the editor of a post (or page or custom post type) and also has a default "Notes" section available from the admin menu.
 
 Features :  
 
-*  Uses WordPress's built in custom post types    
-*  Works like a regular post    
+*  Uses WordPress's built in custom post types     
 *  Functions with default WYSIWYG editor
-*  Uses Default WP meta field if set to display on post edit screens    
+*  Uses WordPress's meta fields if set to display on post edit screens    
 *  Shows "Notes" on one page in tab format (can be excluded)   
 *  Will not show in front end or search    
 *  Requires default post privileges   
@@ -25,12 +24,10 @@ Features :
 
 Notes :
 
-*  It is currently only possible to set one note post post or post type and one location (above or below editor)
+*  It is currently only possible to set one note per post or post type and one location (above or below editor)
 *  Preview button does not work, as WordPress makes it difficult to get rid of, just ignore it.
-*  Aligning images might make it look weird.
-*  Note meta field is not availibe under screen options for custom post types
+*  Meta field is not available under screen options for custom post types
 
-There is a bug in WP for rendering notes below the editor that has been fixed in 3.6. Another solution is to just drag and drop it back into place using mouse.
 
 Please report issues to:  [https://github.com/wycks/Simple-Admin-Notes](https://github.com/wycks/Simple-Admin-Notes)
 
@@ -47,15 +44,23 @@ Or Upload the zip and hit install.
 == Screenshots ==
 
 1. A screenshot of Notes in the Admin and the Notes menu.
-2. Choose to diplay notes on certain psts by id.
+2. Choose to display notes on certain posts by id.
 
 
 == Changelog ==
 
+1.2.0 
+- Removed custom fields form showing in dropdown
+
+- Added checkbox toggle
+
 1.1.0
- - Fixed CSS issues with jQurry UI
- - Added ability to exclude notes from "notes" section
+ - Fixed CSS issues with jQuery UI
+
+ - Added ability to exclude notes from "notes" section  
+
  - Added ability to add notes to post/pages above and below editor , requires id.
+ 
 
 1.0.5 
 - Fixed tab issue due to extra ul
