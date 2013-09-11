@@ -185,6 +185,8 @@ License: GPL2
 		* @param string $post_id  
 		* @param string $screens visible in defualt notes section
 		* @param string $notesposts query
+		* @param string $get_ids post id string stored in meta field
+		* @param array $id_pieces array of post id's
 		*/
 		function wpt_box_san($post_id){
 	
@@ -197,15 +199,18 @@ License: GPL2
 			$posts_separated = implode( ",",   $post_types );
 			$screens         = array( 'post', 'page',  $posts_separated );
 
+			var_dump($post_id);
+
 				// query CPT use get_posts in admin areas!
 				$args = array(
 					'post_type'       => 'note',
 					'posts_per_page'  => -1,
 					'no_found_rows'   => true,
 					'meta_query'     => array(
-							array(  
-								'value'   => $post_id,
-								'compare' => 'LIKE',
+							array(
+							    'key'     => 'note_ids', 
+							    'value'   => array(''),
+        						'compare' => 'NOT IN'
 								),
 							)
 					);
@@ -214,14 +219,24 @@ License: GPL2
 
 					foreach(  $notesposts as $notespost ) : setup_postdata( $notespost ); 
 
-						$placement_above = get_post_meta( $notespost->ID, 'note_placement_above', true );
-						$placement_below = get_post_meta( $notespost->ID, 'note_placement_below', true );       
-	 
-						$title = $notespost->post_title;
+						$get_ids = get_post_meta( $notespost->ID, 'note_ids', true );
+						$id_pieces = explode(",", $get_ids);
 
-						$output = get_the_content();
-						$output = apply_filters( 'the_content', $output );
-						$output = str_replace( ']]>', ']]&gt;', $output );
+						var_dump($id_pieces);
+
+						if (in_array($post_id, $id_pieces)) {
+
+							$placement_above = get_post_meta( $notespost->ID, 'note_placement_above', true );
+							$placement_below = get_post_meta( $notespost->ID, 'note_placement_below', true );  
+
+							var_dump($placement_above);     
+		 
+							$title = $notespost->post_title;
+
+							$output = get_the_content();
+							$output = apply_filters( 'the_content', $output );
+							$output = str_replace( ']]>', ']]&gt;', $output );
+						}
 
 					endforeach;
 		 
@@ -286,7 +301,8 @@ License: GPL2
 		*/
 		function my_notes_options_san(){
 
-			if ( is_admin() ) { ?>
+			$screen = get_current_screen();
+			if ( is_admin() && ($screen->id = 'note_page_my_notes')) { ?>
 
 			<script type="text/javascript"> 
 				var $note = jQuery.noConflict(); 
@@ -310,6 +326,8 @@ License: GPL2
 					'post_type' => 'note',
 					'meta_query' => array(
 							array(
+								'posts_per_page'  => -1,
+								'no_found_rows'   => true,
 								'key' => 'note_placement_yes', 
 								'value' => '', 
 								'compare' => 'EXISTS'
