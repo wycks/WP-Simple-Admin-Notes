@@ -42,12 +42,20 @@ Or Upload the zip and hit install.
 
 == Changelog ==
 
+1.3.0
+
+- Fixed bug in notes query
+
+- Fixed bug in meta query for id's
+
 1.2.0 
+
 - Removed custom fields form showing in dropdown
 
 - Added checkbox toggle
 
 1.1.0
+
  - Fixed CSS issues with jQuery UI
 
  - Added ability to exclude notes from "notes" section  
@@ -56,15 +64,13 @@ Or Upload the zip and hit install.
  
 
 1.0.5 
+
 - Fixed tab issue due to extra ul
 
 1.0.4 
+
 - Fixed Broken ul html tag
 
 == Upgrade Notice ==
 
 None yet
-
-== todo ==
-
-Check for post id duplicates
