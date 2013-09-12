@@ -199,8 +199,6 @@ License: GPL2
 			$posts_separated = implode( ",",   $post_types );
 			$screens         = array( 'post', 'page',  $posts_separated );
 
-			var_dump($post_id);
-
 				// query CPT use get_posts in admin areas!
 				$args = array(
 					'post_type'       => 'note',
@@ -222,14 +220,10 @@ License: GPL2
 						$get_ids = get_post_meta( $notespost->ID, 'note_ids', true );
 						$id_pieces = explode(",", $get_ids);
 
-						var_dump($id_pieces);
-
 						if (in_array($post_id, $id_pieces)) {
 
 							$placement_above = get_post_meta( $notespost->ID, 'note_placement_above', true );
 							$placement_below = get_post_meta( $notespost->ID, 'note_placement_below', true );  
-
-							var_dump($placement_above);     
 		 
 							$title = $notespost->post_title;
 
