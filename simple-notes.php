@@ -5,7 +5,7 @@ Plugin URI: https://github.com/wycks/Simple-Admin-Notes
 Description: Adds a simple Notes section to admin areas
 Author: Wycks
 Author URI: http://wordpress.org/extend/plugins/profile/wycks
-Version: 1.2.0
+Version: 1.3.0
 License: GPL2
 */
 

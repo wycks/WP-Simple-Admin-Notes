@@ -1,16 +1,16 @@
 === Plugin Name ===
 Contributors: wycks
 Donate link: http://wordpressfoundation.org
-Tags: notes, admin notes, notepad, client notes, notes, help, 
+Tags: notes, admin notes, notepad, client notes, notes, help
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 3.6
+Tested up to: 3.6.1
+Stable tag: 1.3.0
 
-Adds a simple "Notes" section to the admin menu for adding....notes
+Adds a simple "Notes" section to the admin menu or posts
 
 == Description ==
 
-Like a built in notepad, leave notes for clients or yourself in the WordPress admin.  Attach notes to above or below the editor of a post (or page or custom post type) and also has a default "Notes" section available from the admin menu.
+Like a built in notepad, leave notes for clients or yourself in the WordPress admin.  Attach notes to above or below the editor of a post (or page or custom post type) and also has a default "Notes" section available from the admin menu which you can hide or show.
 
 Features :  
 
@@ -25,9 +25,7 @@ Features :
 Notes :
 
 *  It is currently only possible to set one note per post or post type and one location (above or below editor)
-*  Preview button does not work, as WordPress makes it difficult to get rid of, just ignore it.
-*  Meta field is not available under screen options for custom post types
-
+*  Works with password protection in default section
 
 Please report issues to:  [https://github.com/wycks/Simple-Admin-Notes](https://github.com/wycks/Simple-Admin-Notes)
 
@@ -35,10 +33,6 @@ Please report issues to:  [https://github.com/wycks/Simple-Admin-Notes](https://
 
 Use the Auto Installer.
 Or Upload the zip and hit install.
-
-
-== Frequently Asked Questions ==
-
 
 == Screenshots ==
 
