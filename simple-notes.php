@@ -204,13 +204,13 @@ License: GPL2
 					'post_type'       => 'note',
 					'posts_per_page'  => -1,
 					'no_found_rows'   => true,
-					'meta_query'     => array(
-							array(
-							    'key'     => 'note_ids', 
-							    'value'   => array(''),
-        						'compare' => 'NOT IN'
-								),
-							)
+					'meta_query'      => array(
+						array(
+						    'key'     => 'note_ids', 
+						    'value'   => array(''),
+        					    'compare' => 'NOT IN'
+						),
+					    )
 					);
 
 				$notesposts = get_posts( $args );
@@ -296,7 +296,7 @@ License: GPL2
 		function my_notes_options_san(){
 
 			$screen = get_current_screen();
-			if ( is_admin() && ($screen->id = 'note_page_my_notes')) { ?>
+			if ( is_admin() && ($screen->id == 'note_page_my_notes')) { ?>
 
 			<script type="text/javascript"> 
 				var $note = jQuery.noConflict(); 
@@ -317,15 +317,15 @@ License: GPL2
 				// Need to do 2 loops to set <li> first for tab and then the actual content
 				// check for empty value so it won't show if selected to not show via check-box
 				$args = array(
-					'post_type' => 'note',
+					'post_type'  => 'note',
 					'meta_query' => array(
-							array(
-								'posts_per_page'  => -1,
-								'no_found_rows'   => true,
-								'key' => 'note_placement_yes', 
-								'value' => '', 
-								'compare' => 'EXISTS'
-							)
+						array(
+							'posts_per_page'  => -1,
+							'no_found_rows'   => true,
+							'key' => 'note_placement_yes', 
+							'value' => '', 
+							'compare' => 'EXISTS'
+						)
 					)
 				);
 
