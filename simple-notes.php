@@ -63,7 +63,7 @@ License: GPL2
 						'show_ui'              => true,
 						'show_in_menu'         => true,
 						'menu_position'        => 10,
-						'show_in_nav_menus'    => true,
+						'show_in_nav_menus'    => false,
 						'publicly_queryable'   => false,
 						'exclude_from_search'  => true,
 						'has_archive'          => false,
