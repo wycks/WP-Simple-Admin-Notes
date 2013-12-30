@@ -12,6 +12,8 @@ Adds a simple "Notes" section to the admin menu or posts
 
 Like a built in notepad, leave notes for clients or yourself in the WordPress admin.  Attach notes to above or below the editor of a post (or page or custom post type) and also has a default "Notes" section available from the admin menu which you can hide or show.
 
+The style of the notes section has been updated with the changes in WordPress 3.8+
+
 Features :
 
 *  Uses WordPress's built in custom post types
@@ -44,9 +46,9 @@ Or Upload the zip and hit install.
 
 1.4.0
 
-- Removed Notes from showing in drag and drop menu area
-- Updated the UI to make it look like 3.8's admin UI
-- Fixed lists (ul and ol) from not showing proper styling
+- Removed Notes from showing in drag and drop admin menu area
+- Updated the UI to make it look like 3.8's admin
+- Fixed lists (ul and ol) from not showing
 - Fixed bottom padding for long notes
 
 1.3.0

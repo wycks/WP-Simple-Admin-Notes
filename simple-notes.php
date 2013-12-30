@@ -226,10 +226,9 @@ License: GPL2
 
                             $title = $notespost->post_title;
 
-                            $output = get_the_content();
+                            $output = get_the_content('',FALSE,'');
                             $output = apply_filters( 'the_content', $output );
                             $output = str_replace( ']]>', ']]&gt;', $output );
-                            $output = str_replace( 'more', '', $output );
                         }
 
                     endforeach;
@@ -357,7 +356,7 @@ License: GPL2
                 ?>
 
                     <div id="tabs-<?php echo $tabs_id; ?>">
-                    <p class="note-date">Posted: <?php the_date("j M Y"); ?> | <?php edit_post_link('Edit this note'); ?></p>
+                    <p class="note-date">Posted: <?php the_date("j M Y"); ?> | <?php edit_post_link('Edit'); ?></p>
 
                     <?php the_content('',FALSE,''); ?>
 
